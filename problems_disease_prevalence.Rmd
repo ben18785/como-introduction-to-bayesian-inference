@@ -15,6 +15,19 @@ Suppose we collect data $X = 4$ individuals testing positive for a disease in a 
 
 4. Plot the binomial distribution with $N=10$ and show how it varies across $\theta = (0.1, 0.5, 0.9)$.
 
+```{r}
+theta <- 0.1
+N <- 10
+x <- seq(0, N, 1)
+prob <- vector(length = length(x))
+for(i in seq_along(prob)) {
+  prob[i] <- pbinom(x[i], N, theta)
+}
+plot(x, prob)
+sum(prob)
+```
+
+
 ## Maximum likelihood estimation
 5. Plot the likelihood function
 

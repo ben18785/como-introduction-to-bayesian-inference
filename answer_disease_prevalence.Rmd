@@ -61,7 +61,7 @@ likelihood_values <- map_dbl(theta, ~dbinom(X, N, .))
 tibble(theta=theta, likelihood=likelihood_values) %>%
   ggplot(aes(theta, likelihood)) +
   geom_line() +
-  xlab("X") +
+  xlab("theta") +
   ylab("Density")
 ```
 
